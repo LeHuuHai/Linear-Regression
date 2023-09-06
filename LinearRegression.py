@@ -43,10 +43,6 @@ print("cost: ", cost)
 print("predict: ")
 print(predict(19, weight, bias))
 
-# index_iter = [i for i in range(60)]
-# plt.plot(index_iter, cost)
-# plt.show()
-
 plt.scatter(X, y, marker='o')
 x_line = np.linspace(0,60,100)
 def f(x, weight, bias):
@@ -54,4 +50,3 @@ def f(x, weight, bias):
 y_line = f(x_line, weight, bias)
 plt.plot(x_line, y_line)
 plt.show()
-#%%
