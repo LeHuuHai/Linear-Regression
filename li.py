@@ -18,7 +18,7 @@ def grad(Xbar, y, weight):
     return 1/n * Xbar.T.dot(Xbar.dot(weight) - y)
 def loss_function(Xbar, y, weight):
     n = Xbar.shape[0]
-    return 0.5/n * np.linalg.norm(Xbar.dot(weight) - y)
+    return 0.5/n * np.linalg.norm(Xbar.dot(weight) - y)**2
 
 def update_weight(Xbar, y, weight, eta):
     weight -= grad(Xbar, y, weight)*eta
